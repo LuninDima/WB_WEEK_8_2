@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Супергерои</string>
+    <string name="error">Ошибка</string>
+    <string name="reload">Перезагрузить</string>
+    <string name="tvIntelligenceText">Интеллект</string>
+    <string name="tvStrengthText">Сила</string>
+    <string name="tvSpeedText">Скорость</string>
+    <string name="tvDurabilityText">Выносливость</string>
+    <string name="tvPowerText">Мощность</string>
+    <string name="tvCombatText">Бой</string>
+    <string name="buttonBackToListHeroesFragmentText">назад</string>
+    <string name="tvPowerStatsText">Характеристики</string>
+
+</resources>

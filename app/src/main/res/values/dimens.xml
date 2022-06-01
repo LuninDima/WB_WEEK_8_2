@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="recycler_item_padding">1dp</dimen>
+    <dimen name="recycler_item_line_height">1dp</dimen>
+    <dimen name="fragment_hero_details_tvName_text_size">26sp</dimen>
+    <dimen name="ivListHeroesFragmentRecyclerItemTextSize">26dp</dimen>
+    <dimen name="listHeroesFragmentRecyclerItemMargin">5dp</dimen>
+    <dimen name="ivListHeroesFragmentRecyclerItemSize">50dp</dimen>
+    <dimen name="tvListHeroesFragmentRecyclerItemMarginStart">20dp</dimen>
+    <dimen name="tvPoserStatsMargin">5dp</dimen>
+</resources>
