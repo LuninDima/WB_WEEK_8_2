@@ -1,4 +1,4 @@
-package com.example.wb_week_5_2.view.listHeroes
+package com.example.wb_week_7_22.view.listHeroes
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.wb_week_5_2.R
-import com.example.wb_week_5_2.model.Hero
+import com.example.wb_week_7_22.R
+import com.example.wb_week_7_22.model.Hero
 import com.squareup.picasso.Picasso
 
 class ListHeroesFragmentAdapter(
@@ -54,8 +54,8 @@ class ListHeroesFragmentAdapter(
                 val heroImage = findViewById<ImageView>(R.id.ivListHeroesFragmentRecyclerItem)
 
                 Picasso.with(context)
-                    .load(hero.image.url)
-                    .into(heroImage);
+                    .load(hero.images.xs)
+                    .into(heroImage)
 
                 findViewById<TextView>(R.id.tvListHeroesFragmentRecyclerItem).text =
                     hero.name

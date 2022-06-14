@@ -1,6 +1,6 @@
-package com.example.wb_week_5_2.viewModel
+package com.example.wb_week_7_22.viewModel
 
-import com.example.wb_week_5_2.model.Hero
+import com.example.wb_week_7_22.model.Hero
 
 sealed class AppStateList {
     data class Success(val Hero: List<Hero>) : AppStateList()

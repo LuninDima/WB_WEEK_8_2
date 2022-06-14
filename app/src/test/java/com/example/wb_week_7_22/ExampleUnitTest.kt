@@ -1,4 +1,4 @@
-package com.example.wb_week_5_2
+package com.example.wb_week_7_22
 
 import org.junit.Test
 

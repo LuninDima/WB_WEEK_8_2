@@ -1,4 +1,4 @@
-package com.example.wb_week_5_2.view.listHeroes
+package com.example.wb_week_7_22.view.listHeroes
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.wb_week_5_2.viewModel.AppStateList
-import com.example.wb_week_5_2.viewModel.ListHeroViewModel
-import com.example.wb_week_5_2.R
-import com.example.wb_week_5_2.databinding.FragmentListHeroesBinding
-import com.example.wb_week_5_2.model.Hero
-import com.example.wb_week_5_2.utils.showSnackBar
-import com.example.wb_week_5_2.view.heroDetails.HeroDetailsFragment
+import com.example.wb_week_7_22.viewModel.AppStateList
+import com.example.wb_week_7_22.R
+import com.example.wb_week_7_22.databinding.FragmentListHeroesBinding
+import com.example.wb_week_7_22.model.Hero
+import com.example.wb_week_7_22.utils.showSnackBar
+import com.example.wb_week_7_22.view.heroDetails.HeroDetailsFragment
+import com.example.wb_week_7_22.viewModel.ListHeroViewModel
 
 class ListHeroesFragment : Fragment() {
 
@@ -39,7 +39,7 @@ class ListHeroesFragment : Fragment() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        viewModel.getListHeroFromRemoteServer()
+        viewModel.getDataHeroes()
         super.onCreate(savedInstanceState)
     }
 

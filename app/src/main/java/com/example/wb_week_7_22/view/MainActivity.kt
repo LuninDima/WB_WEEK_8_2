@@ -1,10 +1,10 @@
-package com.example.wb_week_5_2.view
+package com.example.wb_week_7_22.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.wb_week_5_2.R
-import com.example.wb_week_5_2.databinding.ActivityMainBinding
-import com.example.wb_week_5_2.view.listHeroes.ListHeroesFragment
+import com.example.wb_week_7_22.R
+import com.example.wb_week_7_22.databinding.ActivityMainBinding
+import com.example.wb_week_7_22.view.listHeroes.ListHeroesFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -17,5 +17,7 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.fragment_container, ListHeroesFragment.newInstance())
                 .commitAllowingStateLoss()
         }
+
+
     }
 }

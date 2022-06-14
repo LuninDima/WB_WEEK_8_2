@@ -1,4 +1,4 @@
-package com.example.wb_week_5_2.utils
+package com.example.wb_week_7_22.utils
 
 import android.view.View
 import com.google.android.material.snackbar.Snackbar
