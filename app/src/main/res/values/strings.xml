@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Супергерои</string>
-    <string name="error">Ошибка</string>
+    <string name="app_name">Wiki Heroes</string>
+    <string name="error">Ошибка. Проверьте подключение к интернету</string>
     <string name="reload">Перезагрузить</string>
     <string name="tvIntelligenceText">Интеллект</string>
     <string name="tvStrengthText">Сила</string>
@@ -10,5 +10,16 @@
     <string name="tvCombatText">Бой</string>
     <string name="buttonBackToListHeroesFragmentText">назад</string>
     <string name="tvPowerStatsText">Характеристики</string>
+
+    <string name="menu_item_about_text">About</string>
+    <string name="tv_github_text">github.com/LuninDima?tab=repositories</string>
+    <string name="tv_author_text">Автор:</string>
+    <string name="tv_author_name_text">Лунин Дмитрий</string>
+    <string name="tv_about_text">О приложении</string>
+    <string name="menu_main_text">Главная</string>
+    <string name="telegram">Telegram:</string>
+    <string name="telegram_url">https://t.me/LuninDmitriy</string>
+    <string name="tv_data_app_value_text">21.06.2022</string>
+    <string name="tv_data_app_text">Дата создания приложения:</string>
 
 </resources>

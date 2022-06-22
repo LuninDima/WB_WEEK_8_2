@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "WB_WEEK_7_22"
+rootProject.name = "WB_WEEK_8_2"
 include ':app'

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/menuMain"
+        android:menuCategory="secondary"
+        android:title="@string/menu_main_text"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menuAbout"
+        android:menuCategory="secondary"
+        android:title="@string/tv_about_text"
+        app:showAsAction="ifRoom" />
+
+
+</menu>
