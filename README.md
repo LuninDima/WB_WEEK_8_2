@@ -4,4 +4,4 @@
 При повторной загрузке приложения данные подгружаются из хранилища SharedPreferences.
 При клике на определенного героя открывается детальная информация о нём. 
 Используемый стек:
-MVVM, Single Activity, Retrofit, Gson, Picasso. 
+Dagger2, MVVM, Single Activity, Retrofit, Gson, Picasso. 
