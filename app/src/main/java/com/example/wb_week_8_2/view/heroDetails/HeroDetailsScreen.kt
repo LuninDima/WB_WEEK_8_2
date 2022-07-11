@@ -6,9 +6,11 @@ import androidx.fragment.app.FragmentFactory
 import com.example.wb_week_8_2.view.heroDetails.HeroDetailsFragment
 import com.github.terrakok.cicerone.androidx.FragmentScreen
 
-class HeroDetailsScreen(private val bundle: Bundle): FragmentScreen {
+class HeroDetailsScreen(var bundle: Bundle): FragmentScreen {
     override fun createFragment(factory: FragmentFactory): Fragment {
-       return HeroDetailsFragment.newInstance(bundle)
+        val fragment= HeroDetailsFragment()
+        fragment.arguments = bundle
+       return fragment
     }
 
 }

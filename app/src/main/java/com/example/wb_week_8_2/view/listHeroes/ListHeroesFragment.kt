@@ -5,23 +5,38 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.wb_week_8_2.App
-import com.example.wb_week_8_2.viewModel.AppStateList
 import com.example.wb_week_8_2.R
 import com.example.wb_week_8_2.databinding.FragmentListHeroesBinding
 import com.example.wb_week_8_2.model.Hero
 import com.example.wb_week_8_2.utils.showSnackBar
 import com.example.wb_week_8_2.view.heroDetails.HeroDetailsFragment
 import com.example.wb_week_8_2.view.heroDetails.HeroDetailsScreen
+import com.example.wb_week_8_2.viewModel.AppStateList
 import com.example.wb_week_8_2.viewModel.ListHeroViewModel
+import com.example.wb_week_8_2.viewModel.MainViewModelFactory
+import com.github.terrakok.cicerone.Router
+import javax.inject.Inject
 
 class ListHeroesFragment : Fragment() {
 
     private var _binding: FragmentListHeroesBinding? = null
     private val binding get() = _binding!!
-    private val viewModel: ListHeroViewModel by lazy { ViewModelProvider(this).get(ListHeroViewModel::class.java) }
+
+    @Inject
+    lateinit var vmFactory: MainViewModelFactory
+
+    private val viewModel: ListHeroViewModel by lazy {
+        ViewModelProvider(this, vmFactory).get(
+            ListHeroViewModel::class.java
+        )
+    }
+
+    @Inject
+    lateinit var router: Router
+    private lateinit var bundle2: Bundle
+
     private val adapter = ListHeroesFragmentAdapter(object : OnItemViewClickListener {
 
         override fun onItemViewClick(hero: Hero) {
@@ -33,10 +48,13 @@ class ListHeroesFragment : Fragment() {
         val bundle = Bundle().apply {
             putParcelable(HeroDetailsFragment.BUNDLE_EXTRA, hero)
         }
-        App.appInstants?.router?.navigateTo(HeroDetailsScreen(bundle))
+        bundle2 = bundle
+        router.navigateTo(HeroDetailsScreen(bundle))
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        App.appComponent.inject(this)
         viewModel.getDataHeroes()
         super.onCreate(savedInstanceState)
     }
@@ -48,6 +66,7 @@ class ListHeroesFragment : Fragment() {
         _binding = FragmentListHeroesBinding.inflate(inflater, container, false)
         viewModel.getLiveData().observe(viewLifecycleOwner) { renderData(it) }
         binding.listHeroesFragmentRecyclerView.adapter = adapter
+
         return binding.root
     }
 
@@ -87,4 +106,6 @@ class ListHeroesFragment : Fragment() {
         adapter.removeListener()
         super.onDestroy()
     }
+
+
 }

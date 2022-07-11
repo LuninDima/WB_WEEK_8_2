@@ -59,7 +59,7 @@ class HeroDetailsFragment : Fragment() {
 
     companion object {
         const val BUNDLE_EXTRA = "hero"
-        fun newInstance(bundle: Bundle): HeroDetailsFragment {
+            fun newInstance(bundle: Bundle): HeroDetailsFragment {
             val fragment = HeroDetailsFragment()
             fragment.arguments = bundle
             return fragment

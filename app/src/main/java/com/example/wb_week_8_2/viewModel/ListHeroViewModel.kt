@@ -17,6 +17,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.io.IOException
+import javax.inject.Inject
 
 
 private const val SEVER_ERROR = "Ошибка сервера"
@@ -24,11 +25,11 @@ private const val REQUEST_ERROR = "ошибка запроса на сервер
 private var listHeroes = arrayListOf<Hero>()
 
 
-class ListHeroViewModel(
-    private val listHeroLiveData: MutableLiveData<
-            AppStateList> = MutableLiveData(),
-    private val repositoryImpl: Repository = RepositoryImpl(RemoteDataSource(), LocalDataSource())
+class ListHeroViewModel (
+  var repositoryImpl: Repository
 ) : ViewModel() {
+    var listHeroLiveData: MutableLiveData<AppStateList> = MutableLiveData()
+
     fun getLiveData() = listHeroLiveData
 
     fun getDataHeroes() {
@@ -74,7 +75,7 @@ class ListHeroViewModel(
         }
     }
 
-    private fun setData(serverResponse: ArrayList<Hero>): AppStateList {
+     fun setData(serverResponse: ArrayList<Hero>): AppStateList {
         return AppStateList.Success(serverResponse)
     }
 }
